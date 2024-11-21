@@ -1,20 +1,21 @@
 function calc(a, b, op) {
-  if (op === 'add') {
-    return add(a, b)
-  } else if (op === 'sub') {
-    return sub(a, b)
-  } else if (op === 'multi') {
-    return multi(a, b)
-  } else if (op === 'div') {
-    return div(a, b)
-  } else if (op === 'mod') {
-    return mod(a, b)
-  } else if (op === 'exp') {
-    return exp(a, b)
-  } else if (op === 'perc') {
-    return perc(a, b)
-  } else {
-    throw new Error(`Неподдерживаемая операция: ${op}`)
+  switch (op) {
+    case 'add':
+      return add(a, b)
+    case 'sub':
+      return sub(a, b)
+    case 'multi':
+      return multi(a, b)
+    case 'div':
+      return div(a, b)
+    case 'mod':
+      return mod(a, b)
+    case 'exp':
+      return exp(a, b)
+    case 'perc':
+      return perc(a, b)
+    default:
+      throw new Error(`Неподдерживаемая операция: ${op}`)
   }
 }
 
